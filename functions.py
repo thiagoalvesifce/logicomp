@@ -15,7 +15,7 @@ def subformulas(formula):
 
 
 def atoms(formula):
-	"""Returns the set of all atomic formulas occurring in a formula."""
+	"""Returns the set of all atoms occurring in a formula."""
 	pass
 	# ======== YOUR CODE HERE ========
 
