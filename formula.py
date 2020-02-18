@@ -1,3 +1,10 @@
+"""This module is designed to define formulas in propositional logic.
+For example, the following piece of code creates an object representing (p v s):
+
+formula1 = Or(Atom('p'), Atom('s'))
+"""
+
+
 class Atom:
 
 	def __init__(self, name):
