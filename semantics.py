@@ -1,4 +1,4 @@
-"""The goal in this module is to define functions associated with the semantics of formulas in propositional logic."""
+"""The goal in this module is to define functions associated with the semantics of formulas in propositional logic. """
 
 
 from formula import *

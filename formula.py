@@ -2,6 +2,7 @@
 For example, the following piece of code creates an object representing (p v s):
 
 formula1 = Or(Atom('p'), Atom('s'))
+
 """
 
 

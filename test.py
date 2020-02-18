@@ -1,4 +1,4 @@
-"""You can test your functions in this module as in the following code:"""
+"""You can test your functions in this module as in the following code: """
 
 
 from formula import *
