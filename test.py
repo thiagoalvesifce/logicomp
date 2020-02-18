@@ -18,3 +18,4 @@ print(formula6)
 print(formula7)
 
 print(length(formula1))
+print(length(formula3))
