@@ -28,3 +28,9 @@ def number_of_atoms(formula):
     """Returns the number of distinct atoms occurring in a formula."""
     pass
     # ======== YOUR CODE HERE ========
+
+
+def number_of_connectives(formula):
+    """Returns the number of connectives occurring in a formula."""
+    pass
+    # ======== YOUR CODE HERE ========
