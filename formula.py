@@ -7,6 +7,9 @@ formula1 = Or(Atom('p'), Atom('s'))
 
 
 class Atom:
+    """
+    This class represents propositional logic variables.
+    """
 
     def __init__(self, name):
         self.name = name
@@ -52,3 +55,19 @@ class Or:
 
     def __str__(self):
         return "(" + self.left.__str__() + " " + u"\u2228" + " " + self.right.__str__() + ")"
+
+
+class Iff:
+    """
+    Describes the 'if and only if' logical connective (<->) from propositional logic.
+    The unicode value for <-> is 2194.
+    """
+    pass
+
+
+class Xor:
+    """
+    Describes the xor (exclusive or) logical connective from propositional logic.
+    The unicode value for xor is 2295.
+    """
+    pass
