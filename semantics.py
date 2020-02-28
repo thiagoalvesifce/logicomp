@@ -5,7 +5,9 @@ from formula import *
 
 
 def truth_value(formula, valuation):
-    """Determines the truth value of a formula in a valuation."""
+    """Determines the truth value of a formula in a valuation.
+    A valuation may be defined as dictionary. For example, {'p': True, 'q': False}.
+    """
     pass
     # ======== YOUR CODE HERE ========
 

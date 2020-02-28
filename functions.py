@@ -34,3 +34,10 @@ def number_of_connectives(formula):
     """Returns the number of connectives occurring in a formula."""
     pass
     # ======== YOUR CODE HERE ========
+
+
+def substitution(formula, old_subformula, new_subformula):
+    """Returns a new formula obtained by replacing all occurrences
+    of old_subformula in the input formula by new_subformula."""
+    pass
+    # ======== YOUR CODE HERE ========
