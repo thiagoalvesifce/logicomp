@@ -4,21 +4,21 @@
 from formula import *
 
 
-def truth_value(formula, valuation):
-    """Determines the truth value of a formula in a valuation.
-    A valuation may be defined as dictionary. For example, {'p': True, 'q': False}.
+def truth_value(formula, interpretation):
+    """Determines the truth value of a formula in an interpretation (valuation).
+    An interpretation may be defined as dictionary. For example, {'p': True, 'q': False}.
     """
     pass
     # ======== YOUR CODE HERE ========
 
 
-def logical_consequence(premises, conclusion):
+def is_logical_consequence(premises, conclusion):  # function TT-Entails? in the book AIMA.
     """Returns True if the conclusion is a logical consequence of the set of premises. Otherwise, it returns False."""
     pass
     # ======== YOUR CODE HERE ========
 
 
-def logical_equivalence(formula1, formula2):
+def is_logical_equivalence(formula1, formula2):
     """Checks whether formula1 and formula2 are logically equivalent."""
     pass
     # ======== YOUR CODE HERE ========
@@ -31,6 +31,8 @@ def is_valid(formula):
 
 
 def is_satisfiable(formula):
-    """Checks whether formula is satisfiable."""
+    """Checks whether formula is satisfiable.
+    In other words, if the input formula is satisfiable, it returns an interpretation that assigns true to the formula.
+    Otherwise, it returns False."""
     pass
     # ======== YOUR CODE HERE ========

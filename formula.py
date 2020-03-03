@@ -17,6 +17,9 @@ class Atom:
     def __str__(self):
         return str(self.name)
 
+    def __eq__(self, other):
+        return isinstance(other, Atom) and other.name == self.name
+
 
 class Implies:
 
@@ -27,6 +30,9 @@ class Implies:
     def __str__(self):
         return "(" + self.left.__str__() + " " + u"\u2192" + " " + self.right.__str__() + ")"
 
+    def __eq__(self, other):
+        return isinstance(other, Implies) and other.left == self.left and other.right == self.right
+
 
 class Not:
 
@@ -35,6 +41,9 @@ class Not:
 
     def __str__(self):
         return "(" + u"\u00ac" + str(self.inner) + ")"
+
+    def __eq__(self, other):
+        return isinstance(other, Not) and other.inner == self.inner
 
 
 class And:
@@ -46,6 +55,9 @@ class And:
     def __str__(self):
         return "(" + self.left.__str__() + " " + u"\u2227" + " " + self.right.__str__() + ")"
 
+    def __eq__(self, other):
+        return isinstance(other, And) and other.left == self.left and other.right == self.right
+
 
 class Or:
 
@@ -56,11 +68,14 @@ class Or:
     def __str__(self):
         return "(" + self.left.__str__() + " " + u"\u2228" + " " + self.right.__str__() + ")"
 
+    def __eq__(self, other):
+        return isinstance(other, Or) and other.left == self.left and other.right == self.right
+
 
 class Iff:
     """
     Describes the 'if and only if' logical connective (<->) from propositional logic.
-    The unicode value for <-> is 2194.
+    A unicode value for <-> is 2194.
     """
     pass
 
@@ -68,6 +83,6 @@ class Iff:
 class Xor:
     """
     Describes the xor (exclusive or) logical connective from propositional logic.
-    The unicode value for xor is 2295.
+    A unicode value for xor is 2295.
     """
     pass
