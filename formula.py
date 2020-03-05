@@ -6,12 +6,18 @@ formula1 = Or(Atom('p'), Atom('s'))
 """
 
 
-class Atom:
+class Formula:
+    def __init__(self):
+        pass
+
+
+class Atom(Formula):
     """
     This class represents propositional logic variables.
     """
 
     def __init__(self, name):
+        super().__init__()
         self.name = name
 
     def __str__(self):
@@ -21,9 +27,10 @@ class Atom:
         return isinstance(other, Atom) and other.name == self.name
 
 
-class Implies:
+class Implies(Formula):
 
     def __init__(self, left, right):
+        super().__init__()
         self.left = left
         self.right = right
 
@@ -34,9 +41,10 @@ class Implies:
         return isinstance(other, Implies) and other.left == self.left and other.right == self.right
 
 
-class Not:
+class Not(Formula):
 
     def __init__(self, inner):
+        super().__init__()
         self.inner = inner
 
     def __str__(self):
@@ -46,9 +54,10 @@ class Not:
         return isinstance(other, Not) and other.inner == self.inner
 
 
-class And:
+class And(Formula):
 
     def __init__(self, left, right):
+        super().__init__()
         self.left = left
         self.right = right
 
@@ -59,9 +68,10 @@ class And:
         return isinstance(other, And) and other.left == self.left and other.right == self.right
 
 
-class Or:
+class Or(Formula):
 
     def __init__(self, left, right):
+        super().__init__()
         self.left = left
         self.right = right
 
