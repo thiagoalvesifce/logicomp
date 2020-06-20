@@ -16,41 +16,45 @@ def length(formula):
 
 
 def subformulas(formula):
-    """Removes the repetitions included by the function subformulas_aux."""
-    subs = subformulas_aux(formula)
-    result = []
-    for sub in subs:
-        included = False
-        for sub2 in result:
-            if sub == sub2:
-                included = True
-        if not included:
-            result = result + [sub]
-    return result
-
-
-def subformulas_aux(formula):
     """Returns the set of all subformulas of a formula.
-    It includes repetitions since x and y are distinct objects in the following code:
-    x = Atom('p')
-    y = Atom('p')"""
+
+    For example, observe the piece of code below.
+
+    my_formula = Implies(Atom('p'), Or(Atom('p'), Atom('s')))
+    for subformula in subformulas(my_formula):
+        print(subformula)
+
+    This piece of code prints p, s, (p v s), (p → (p v s))
+    (Note that there is no repetition of p)
+    """
 
     if isinstance(formula, Atom):
-        return [formula]
+        return {formula}
     if isinstance(formula, Not):
-        return [formula] + subformulas_aux(formula.inner)
+        return {formula}.union(subformulas(formula.inner))
     if isinstance(formula, Implies) or isinstance(formula, And) or isinstance(formula, Or):
-        sub1 = subformulas_aux(formula.left)
-        sub2 = subformulas_aux(formula.right)
-        return [formula] + sub1 + sub2
+        sub1 = subformulas(formula.left)
+        sub2 = subformulas(formula.right)
+        return {formula}.union(sub1).union(sub2)
 
-#  we have shown in class that for all formula A, len(subformulas(A)) <= length(A).
+#  we have shown in class that, for all formula A, len(subformulas(A)) <= length(A).
 
 
 def atoms(formula):
-    """Returns the set of all atoms occurring in a formula."""
+    """Returns the set of all atoms occurring in a formula.
+
+    For example, observe the piece of code below.
+
+    my_formula = Implies(Atom('p'), Or(Atom('p'), Atom('s')))
+    for atom in atoms(my_formula):
+        print(atom)
+
+    This piece of code above prints: p, s
+    (Note that there is no repetition of p)
+    """
     pass
     # ======== YOUR CODE HERE ========
+    # ======== After finishing your code, remove the pass statement ========
 
 
 def number_of_atoms(formula):

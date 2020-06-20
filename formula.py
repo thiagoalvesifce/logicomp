@@ -1,8 +1,12 @@
 """This module is designed to define formulas in propositional logic.
-For example, the following piece of code creates an object representing (p v s):
+For example, the following piece of code creates an object representing (p v s).
 
 formula1 = Or(Atom('p'), Atom('s'))
 
+
+As another example, the piece of code below creates an object that represents (p → (p v s)).
+
+formula2 = Implies(Atom('p'), Or(Atom('p'), Atom('s')))
 """
 
 
@@ -26,6 +30,9 @@ class Atom(Formula):
     def __eq__(self, other):
         return isinstance(other, Atom) and other.name == self.name
 
+    def __hash__(self):
+        return hash((self.name, 'atom'))
+
 
 class Implies(Formula):
 
@@ -40,6 +47,9 @@ class Implies(Formula):
     def __eq__(self, other):
         return isinstance(other, Implies) and other.left == self.left and other.right == self.right
 
+    def __hash__(self):
+        return hash((hash(self.left), hash(self.right), 'implies'))
+
 
 class Not(Formula):
 
@@ -52,6 +62,9 @@ class Not(Formula):
 
     def __eq__(self, other):
         return isinstance(other, Not) and other.inner == self.inner
+
+    def __hash__(self):
+        return hash((hash(self.inner), 'not'))
 
 
 class And(Formula):
@@ -67,6 +80,9 @@ class And(Formula):
     def __eq__(self, other):
         return isinstance(other, And) and other.left == self.left and other.right == self.right
 
+    def __hash__(self):
+        return hash((hash(self.left), hash(self.right), 'and'))
+
 
 class Or(Formula):
 
@@ -81,11 +97,14 @@ class Or(Formula):
     def __eq__(self, other):
         return isinstance(other, Or) and other.left == self.left and other.right == self.right
 
+    def __hash__(self):
+        return hash((hash(self.left), hash(self.right), 'or'))
+
 
 class Iff:
     """
     Describes the 'if and only if' logical connective (<->) from propositional logic.
-    A unicode value for <-> is 2194.
+    Unicode value for <-> is 2194.
     """
     pass
 
@@ -93,6 +112,6 @@ class Iff:
 class Xor:
     """
     Describes the xor (exclusive or) logical connective from propositional logic.
-    A unicode value for xor is 2295.
+    Unicode value for xor is 2295.
     """
     pass
