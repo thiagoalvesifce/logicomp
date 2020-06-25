@@ -5,12 +5,10 @@ Ana não pode na Sexta.
 Pedro não pode Terça nem Quinta.
 Existe um dia que eles possam se reunir satisfazendo todas as demandas?"""
 
-
 from semantics import *
 
-
 meeting_monday = Atom('reuniao na segunda')
-meeting_tuesday = Atom('reuniao na terça')
+meeting_tuesday = Atom('reuniao na terca')
 meeting_wednesday = Atom('reuniao na quarta')
 meeting_thursday = Atom('reuniao na quinta')
 meeting_friday = Atom('reuniao na sexta')
@@ -23,5 +21,3 @@ pedro = And(Not(meeting_tuesday), Not(meeting_thursday))
 all_requirements = And(And(And(joao, carol), ana), pedro)
 
 print(is_satisfiable(all_requirements))
-
-

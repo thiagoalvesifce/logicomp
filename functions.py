@@ -54,7 +54,6 @@ def atoms(formula):
     """
     pass
     # ======== YOUR CODE HERE ========
-    # ======== After finishing your code, remove the pass statement ========
 
 
 def number_of_atoms(formula):

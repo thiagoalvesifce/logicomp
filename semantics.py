@@ -2,6 +2,7 @@
 
 
 from formula import *
+from functions import atoms
 
 
 def truth_value(formula, interpretation):
@@ -36,3 +37,5 @@ def is_satisfiable(formula):
     Otherwise, it returns False."""
     pass
     # ======== YOUR CODE HERE ========
+
+
