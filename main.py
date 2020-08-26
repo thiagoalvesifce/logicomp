@@ -30,6 +30,7 @@ print('length of formula3:', length(formula3))
 print('length of formula7:', length(formula7))
 
 print('subformulas of formula7:')
+print(subformulas(formula7))
 for subformula in subformulas(formula7):
     print(subformula)
 

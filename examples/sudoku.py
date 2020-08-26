@@ -1,6 +1,5 @@
 from semantics import *
 import time
-import math
 
 '''
 No sudoku 4x4 é preciso preencher os quadrados de um grid de 4 linhas e 4 colunas com números de 1 a 4, 
@@ -146,13 +145,13 @@ def columns_constraints(grid):
 
 def subgrids_constrains(grid):
     """
-        Returns a formula imposing that each subgrid must be filled with all numbers.
-        For example, the final formula is of the form
-        ... ∧ (Atom('1_1_4') v Atom('1_2_4') v Atom('2_1_4') v Atom('2_2_4')) ∧ ...,
-        which forces that 4 is filled in some cell of the first subgrid.
-        :param grid: sudoku grid
-        :return: And formula
-        """
+    Returns a formula imposing that each subgrid must be filled with all numbers.
+    For example, the final formula is of the form
+    ... ∧ (Atom('1_1_4') v Atom('1_2_4') v Atom('2_1_4') v Atom('2_2_4')) ∧ ...,
+    which forces that 4 is filled in some cell of the first subgrid.
+    :param grid: sudoku grid
+    :return: And formula
+    """
     subgrids_formulas = []
     for sl in range(2):
         for sc in range(2):
@@ -206,8 +205,3 @@ print('Solução do sudoku:')
 sudoku_solution(grid_test1)
 end_time = time.time()
 print('Time:', end_time - start_time)
-
-
-
-
-
