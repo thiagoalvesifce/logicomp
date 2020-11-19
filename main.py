@@ -12,7 +12,7 @@ formula4 = And(Atom('p'), Atom('s'))
 formula5 = Not(And(Atom('p'), Atom('s')))
 formula6 = Or(Not(And(Atom('p'), Atom('s'))), Atom('q'))
 formula7 = Implies(Not(And(Atom('p'), Atom('s'))), And(Atom('q'), Atom('r')))
-formula8 = Implies(Not(And(Atom('p'), Atom('s'))), And(Atom('q'), Not(And(Atom('p'), Atom('s')))))
+#formula8 = Implies(Not(And(Atom('p'), Atom('s'))), And(Atom('q'), Not(And(Atom('p'), Atom('s')))))
 
 
 print('formula1:', formula1)
