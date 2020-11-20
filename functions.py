@@ -57,7 +57,12 @@ def atoms(formula):
 
 
 def number_of_atoms(formula):
-    """Returns the number of distinct atoms occurring in a formula."""
+    """Returns the number of atoms occurring in a formula.
+    For instance,
+    number_of_atoms(Implies(Atom('q'), And(Atom('p'), Atom('q'))))
+
+    must return 3 (Observe that this function counts the repetitions of atoms)
+    """
     pass
     # ======== YOUR CODE HERE ========
 

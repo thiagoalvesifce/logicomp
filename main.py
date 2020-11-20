@@ -5,15 +5,20 @@ from formula import *
 from functions import *
 
 
-formula1 = Atom('p')
-formula2 = Atom('q')
-formula3 = And(formula1, formula2)
-formula4 = And(Atom('p'), Atom('s'))
-formula5 = Not(And(Atom('p'), Atom('s')))
-formula6 = Or(Not(And(Atom('p'), Atom('s'))), Atom('q'))
-formula7 = Implies(Not(And(Atom('p'), Atom('s'))), And(Atom('q'), Atom('r')))
+formula1 = Atom('p')  # p
+formula2 = Atom('q')  # q
+formula3 = And(formula1, formula2)  # (p /\ q)
+formula4 = And(Atom('p'), Atom('s'))  # (p /\ s)
+formula5 = Not(And(Atom('p'), Atom('s')))  # (¬(p /\ s))
+formula6 = Or(Not(And(Atom('p'), Atom('s'))), Atom('q'))  # ((¬(p /\ s)) v q)
+formula7 = Implies(Not(And(Atom('p'), Atom('s'))), And(Atom('q'), Atom('r')))  # ((¬(p /\ s)) -> (q /\ r))
 formula8 = Implies(Not(And(Atom('p'), Atom('s'))), And(Atom('q'), Not(And(Atom('p'), Atom('s')))))
+# ((¬(p /\ s)) -> (q /\ (¬(p /\ s))))
 
+
+print(formula1 == formula3)
+print(formula1 == formula2)
+print(formula3 == And(Atom('p'), Atom('q')))
 
 print('formula1:', formula1)
 print('formula2:', formula2)

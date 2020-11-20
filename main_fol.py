@@ -1,5 +1,3 @@
-from fol_formula import *
-from term import *
 from interpretation_fol import *
 
 term1 = Con('a')
