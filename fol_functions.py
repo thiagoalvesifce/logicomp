@@ -76,6 +76,11 @@ def free_variables(formula):
     pass
 
 
+def bounded_variables(formula):
+    """Returns the set of all bounded variables of a formula"""
+    pass
+
+
 def universal_closure(formula):
     """Returns the universal closure of a formula"""
     pass
