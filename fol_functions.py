@@ -84,3 +84,23 @@ def universal_closure(formula):
 def existential_closure(formula):
     """Returns the existential closure of a formula"""
     pass
+
+
+def number_free_occurrences(var, formula):
+    """Returns the number of free occurrences of variable var in formula.
+    For example, number_free_occurrences(Var('x'),
+                                         ForAll(Var('y'), Implies(And(Atom('P', [Var('x')]),
+                                                                      Atom('Q', [Var('y')])),
+                                                                  ForAll(Var('x'), Atom('Q', [Var('x')]))
+                                                                 )
+                                               )
+                                        )
+    must return 1
+    """
+    pass
+
+
+# scope?
+# quantifier-free
+# closed term / ground terms
+# closed formula / sentence
