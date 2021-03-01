@@ -26,7 +26,15 @@ def constants_from_term(term):
 
 def variables_from_term(term):
     """Returns the set of all variables occurring in a term"""
-    pass
+    if isinstance(term, Con):
+        return set()
+    if isinstance(term, Var):
+        return {term}
+    if isinstance(term, Fun):
+        variables = set()
+        for inner_term in term.args:
+            variables = variables.union(variables_from_term(inner_term))
+        return variables
 
 
 def function_symbols_from_term(term):
