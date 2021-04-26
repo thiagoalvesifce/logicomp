@@ -52,8 +52,7 @@ def atoms(formula):
     This piece of code above prints: p, s
     (Note that there is no repetition of p)
     """
-    pass
-    # ======== YOUR CODE HERE ========
+    pass  # ======== REMOVE THIS LINE AND INSERT YOUR CODE HERE ========
 
 
 def number_of_atoms(formula):
@@ -63,18 +62,54 @@ def number_of_atoms(formula):
 
     must return 3 (Observe that this function counts the repetitions of atoms)
     """
-    pass
-    # ======== YOUR CODE HERE ========
+    pass  # ======== REMOVE THIS LINE AND INSERT YOUR CODE HERE ========
 
 
 def number_of_connectives(formula):
     """Returns the number of connectives occurring in a formula."""
-    pass
-    # ======== YOUR CODE HERE ========
+    pass  # ======== REMOVE THIS LINE AND INSERT YOUR CODE HERE ========
+
+
+def is_literal(formula):
+    """Returns True if formula is a literal. It returns False, otherwise"""
+    pass  # ======== REMOVE THIS LINE AND INSERT YOUR CODE HERE ========
 
 
 def substitution(formula, old_subformula, new_subformula):
     """Returns a new formula obtained by replacing all occurrences
     of old_subformula in the input formula by new_subformula."""
-    pass
-    # ======== YOUR CODE HERE ========
+    pass  # ======== REMOVE THIS LINE AND INSERT YOUR CODE HERE ========
+
+
+def is_clause(formula):
+    """Returns True if formula is a clause. It returns False, otherwise"""
+    pass  # ======== REMOVE THIS LINE AND INSERT YOUR CODE HERE ========
+
+
+def is_negation_normal_form(formula):
+    """Returns True if formula is in negation normal form.
+    Returns False, otherwise."""
+    pass  # ======== REMOVE THIS LINE AND INSERT YOUR CODE HERE ========
+
+
+def is_cnf(formula):
+    """Returns True if formula is in conjunctive normal form.
+    Returns False, otherwise."""
+    pass  # ======== REMOVE THIS LINE AND INSERT YOUR CODE HERE ========
+
+
+def is_term(formula):
+    """Returns True if formula is a term. It returns False, otherwise"""
+    pass  # ======== REMOVE THIS LINE AND INSERT YOUR CODE HERE ========
+
+
+def is_dnf(formula):
+    """Returns True if formula is in disjunctive normal form.
+    Returns False, otherwise."""
+    pass  # ======== REMOVE THIS LINE AND INSERT YOUR CODE HERE ========
+
+
+def is_decomposable_negation_normal_form(formula):
+    """Returns True if formula is in decomposable negation normal form.
+    Returns False, otherwise."""
+    pass  # ======== REMOVE THIS LINE AND INSERT YOUR CODE HERE ========
