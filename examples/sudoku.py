@@ -176,17 +176,17 @@ def sudoku_solution(grid):
     final_formula = And(
         And(
             And(
-                given_digits_constraints(grid_test1),
-                rows_constraints(grid_test1)
+                given_digits_constraints(grid),
+                rows_constraints(grid)
             ),
             And(
-                cells_constraints(grid_test1),
-                columns_constraints(grid_test1)
+                cells_constraints(grid),
+                columns_constraints(grid)
             ),
         ),
-        subgrids_constrains(grid_test1)
+        subgrids_constrains(grid)
     )
-    solution = is_satisfiable(final_formula)
+    solution = satisfiability_brute_force(final_formula)
     if solution:
         for i in range(len(grid)):
             for j in range(len(grid)):

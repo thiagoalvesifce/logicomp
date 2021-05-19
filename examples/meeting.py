@@ -20,4 +20,4 @@ pedro = And(Not(meeting_tuesday), Not(meeting_thursday))
 
 all_requirements = And(And(And(joao, carol), ana), pedro)
 
-print(is_satisfiable(all_requirements))
+print(satisfiability_brute_force(all_requirements))

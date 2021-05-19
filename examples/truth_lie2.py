@@ -18,4 +18,4 @@ formula = And(Implies(amy_honest, Not(amy_honest)),
               Implies(Not(amy_honest), amy_honest))
 
 
-print(is_satisfiable(formula))
+print(satisfiability_brute_force(formula))

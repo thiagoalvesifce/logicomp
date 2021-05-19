@@ -36,4 +36,4 @@ david = And(
 
 all_requirements = And(And(And(adam, bridget), charles), david)
 
-print(is_satisfiable(all_requirements))
+print(satisfiability_brute_force(all_requirements))
