@@ -1,6 +1,5 @@
 """You can test your functions in this module as in the following code: """
 
-
 from formula import *
 from functions import *
 
@@ -36,13 +35,18 @@ print('length of formula7:', length(formula7))
 
 print('subformulas of formula7:')
 print(subformulas(formula7))
+
 for subformula in subformulas(formula7):
     print(subformula)
+# end for
+
 
 print('length of formula8:', length(formula8))
 print('subformulas of formula8:')
+
 for subformula in subformulas(formula8):
     print(subformula)
+# end for
 
 #  we have shown in class that for all formula A, len(subformulas(A)) <= length(A):
 # for example, for formula8:
