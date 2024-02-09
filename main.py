@@ -14,6 +14,8 @@ formula7 = Implies(Not(And(Atom('p'), Atom('s'))), And(Atom('q'), Atom('r')))  #
 formula8 = Implies(Not(And(Atom('p'), Atom('s'))), And(Atom('q'), Not(And(Atom('p'), Atom('s')))))
 # ((¬(p /\ s)) -> (q /\ (¬(p /\ s))))
 
+# formula9 = Not('q')
+
 
 print(formula1 == formula3)
 print(formula1 == formula2)
